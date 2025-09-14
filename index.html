@@ -4,84 +4,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BookMyShow Clone</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="main">
-        <div class="aa">
-            <div class="logo">
-                <img src="images/bookmyshow-logo-vector.png" alt="bookmyshow-logo-vector" width="180px" height="100px">
+    <header class="container-fluid py-3 main-header">
+        <div class="row align-items-center">
+            <div class="col-md-2 col-4 logo-col">
+                <img src="images/bookmyshow-logo-vector.png" alt="BookMyShow Logo"
+                    class="img-fluid bookmyshow-logo">
             </div>
-
-            <div class="search">
+            <div class="col-md-5 col-8 search-col">
                 <form class="search-form">
                     <div class="input-group">
-                        <span class="input-group-search">
+                        <span class="input-group-text search-icon-container">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-search" viewBox="0 0 16 16">
+                                class="bi bi-search search-icon" viewBox="0 0 16 16">
                                 <path
                                     d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
                             </svg>
                         </span>
-                        <input type="search" class="search-input w-100"
+                        <input type="search" class="form-control search-input"
                             placeholder="Search for Movies, Events, Plays, Sports and Activities"
-                            aria-label="Search for Movies, Events, Plays, Sports and Activities">
+                            aria-label="Search">
                     </div>
                 </form>
             </div>
-
-            <div class="drop">
-                <div class="dropdown">
-                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-                        aria-expanded="false">
+            <div class="col-md-5 d-none d-md-flex align-items-center justify-content-end header-actions">
+                <div class="dropdown me-3">
+                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown" aria-expanded="false">
                         Kochi
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li><a class="dropdown-item" href="#">kollam</a></li>
-                        <li><a class="dropdown-item" href="#">trissur</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><a class="dropdown-item" href="#">Kollam</a></li>
+                        <li><a class="dropdown-item" href="#">Thrissur</a></li>
+                        <li><a class="dropdown-item" href="#">Other</a></li>
                     </ul>
                 </div>
-            </div>
-            <div class="sign">
-                <a href="">Sign in</a>
-            </div>
-            <div class="ic">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list"
-                    viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
-                </svg>
+                <a href="#" class="btn btn-danger sign-in-btn me-3">Sign in</a>
+                <button class="btn menu-toggle-btn d-lg-none" type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                        class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                    </svg>
+                </button>
             </div>
         </div>
-    </div>
-    <div class="list">
-        <div class="list1">
-            <div class="bb">
-                <ul style="list-style-type: none;">
-                    <li><a href="">Movies</a></li>
-                    <li><a href="">Stream</a></li>
-                    <li><a href="">Events</a></li>
-                    <li><a href="">Plays</a></li>
-                    <li><a href="">Sports</a></li>
-                    <li><a href="">Activities</a></li>
+    </header>
+
+    <nav class="navbar navbar-expand-lg secondary-nav">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Movies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Stream</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Plays</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sports</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Activities</a>
+                    </li>
                 </ul>
-            </div>
-            <div class="bb1">
-                <ul style="list-style-type: none;">
-                    <li><a href="">List your show</a></li>
-                    <li><a href="">Corporates</a></li>
-                    <li><a href="">Offers</a></li>
-                    <li><a href="">Gift cards</a></li>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">List your show</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Corporates</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Offers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Gift cards</a>
+                    </li>
                 </ul>
             </div>
         </div>
-    </div>
-    <div class="slide">
+    </nav>
+
+    <main class="bg-light pb-5">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
@@ -93,13 +115,13 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="images/slide1.avif" class="d-block w-100" alt="slide1" height="400px">
+                    <img src="images/slide1.avif" class="d-block w-100" alt="slide1">
                 </div>
                 <div class="carousel-item">
-                    <img src="images/slide2.avif" class="d-block w-100" alt="slide2" height="400px">
+                    <img src="images/slide2.avif" class="d-block w-100" alt="slide2">
                 </div>
                 <div class="carousel-item">
-                    <img src="images/slide3.avif" class="d-block w-100" alt="slide3" height="400px">
+                    <img src="images/slide3.avif" class="d-block w-100" alt="slide3">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -114,291 +136,397 @@
             </button>
         </div>
 
+        <section class="container py-5">
+            <h2 class="mb-4">Recommended Movies</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5 g-4">
+                <div class="col">
+                    <div class="card h-100 movie-card">
+                        <a href="#">
+                            <img src="images/mov1.avif" class="card-img-top movie-image" alt="A.R.M">
+                            <div class="card-body">
+                                <h5 class="card-title">A.R.M</h5>
+                                <p class="card-text text-muted">Action/Adventure/Drama/Period</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 movie-card">
+                        <a href="#">
+                            <img src="images/mov2.avif" class="card-img-top movie-image" alt="Kishkindha Kaandam">
+                            <div class="card-body">
+                                <h5 class="card-title">Kishkindha Kaandam</h5>
+                                <p class="card-text text-muted">Mystery/Thriller</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 movie-card">
+                        <a href="#">
+                            <img src="images/mov3.avif" class="card-img-top movie-image" alt="Joker: Folie a Deux">
+                            <div class="card-body">
+                                <h5 class="card-title">Joker: Folie a Deux</h5>
+                                <p class="card-text text-muted">Drama/Suspense/Thriller</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 movie-card">
+                        <a href="#">
+                            <img src="images/mov4.avif" class="card-img-top movie-image" alt="Kondal">
+                            <div class="card-body">
+                                <h5 class="card-title">Kondal</h5>
+                                <p class="card-text text-muted">Action/Crime/Drama</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 movie-card">
+                        <a href="#">
+                            <img src="images/mov5.avif" class="card-img-top movie-image" alt="Bad Boyz">
+                            <div class="card-body">
+                                <h5 class="card-title">Bad Boyz</h5>
+                                <p class="card-text text-muted">Action/Comedy</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container py-5">
+            <div class="row">
+                <div class="col-12">
+                    <img src="images/img1.avif" alt="Ad Banner" class="img-fluid rounded">
+                </div>
+            </div>
+        </section>
+
+        <section class="container py-5">
+            <h2 class="mb-4">The Best of Live Events</h2>
+            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6 g-4">
+                <div class="col">
+                    <a href="#">
+                        <img class="img-fluid rounded event-image" src="images/img2.avif" alt="Event 2">
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="#">
+                        <img class="img-fluid rounded event-image" src="images/img3.avif" alt="Event 3">
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="#">
+                        <img class="img-fluid rounded event-image" src="images/img4.avif" alt="Event 4">
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="#">
+                        <img class="img-fluid rounded event-image" src="images/img5.avif" alt="Event 5">
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="#">
+                        <img class="img-fluid rounded event-image" src="images/img6.avif" alt="Event 6">
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="#">
+                        <img class="img-fluid rounded event-image" src="images/img2.avif" alt="Event 2">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="premiere-section text-white py-5">
+            <div class="container">
+                <div class="row align-items-center mb-4">
+                    <div class="col-md-6">
+                        <img src="images/premiere.avif" alt="Premiere" class="img-fluid mb-3 mb-md-0">
+                    </div>
+                    <div class="col-md-6">
+                        <h2>Premieres</h2>
+                        <p>Brand new releases every Friday</p>
+                    </div>
+                </div>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5 g-4">
+                    <div class="col">
+                        <div class="card h-100 movie-card-prem">
+                            <a href="#">
+                                <img class="card-img-top movie-image" src="images/img7.avif" alt="Gondola">
+                                <div class="card-body">
+                                    <h5 class="card-title">Gondola</h5>
+                                    <p class="card-text text-muted">Comedy, Drama, Romantic</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 movie-card-prem">
+                            <a href="#">
+                                <img class="card-img-top movie-image" src="images/img8.avif" alt="Tuesday">
+                                <div class="card-body">
+                                    <h5 class="card-title">Tuesday</h5>
+                                    <p class="card-text text-muted">Drama, Fantasy</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 movie-card-prem">
+                            <a href="#">
+                                <img class="card-img-top movie-image" src="images/img9.avif" alt="Trap (2024)">
+                                <div class="card-body">
+                                    <h5 class="card-title">Trap (2024)</h5>
+                                    <p class="card-text text-muted">Crime, Mystery, Thriller</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 movie-card-prem">
+                            <a href="#">
+                                <img class="card-img-top movie-image" src="images/img10.avif" alt="Jolly LLB 2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Jolly LLB 2</h5>
+                                    <p class="card-text text-muted">Comedy/Drama</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 movie-card-prem">
+                            <a href="#">
+                                <img class="card-img-top movie-image" src="images/img11.avif"
+                                    alt="M.S. Dhoni: The Untold Story">
+                                <div class="card-body">
+                                    <h5 class="card-title">M.S. Dhoni: The Untold Story</h5>
+                                    <p class="card-text text-muted">Biography, Drama</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container py-5">
+            <h2 class="mb-4">Your Music Studio</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5 g-4">
+                <div class="col">
+                    <div class="card h-100 music-card">
+                        <a href="#">
+                            <img class="card-img-top music-image" src="images/img12.avif"
+                                alt="Shillong Cherry Blossom Festival 2024">
+                            <div class="card-body">
+                                <h5 class="card-title">Shillong Cherry Blossom Festival 2024</h5>
+                                <p class="card-text text-muted">RBDSA Sports Complex: Shillong concerts</p>
+                                <p class="card-text text-muted">Concerts</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 music-card">
+                        <a href="#">
+                            <img class="card-img-top music-image" src="images/img13.avif"
+                                alt="BRILLANTE PIANO FESTIVAL - Kochi Chapter">
+                            <div class="card-body">
+                                <h5 class="card-title">BRILLANTE PIANO FESTIVAL - Kochi Chapter</h5>
+                                <p class="card-text text-muted">JT Performing Arts Centre: Kochi</p>
+                                <p class="card-text text-muted">Concerts</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 music-card">
+                        <a href="#">
+                            <img class="card-img-top music-image" src="images/img14.avif" alt="Open Air Kochi">
+                            <div class="card-body">
+                                <h5 class="card-title">Open Air Kochi</h5>
+                                <p class="card-text text-muted">Crowne Plaza :Kochi</p>
+                                <p class="card-text text-muted">Concerts</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 music-card">
+                        <a href="#">
+                            <img class="card-img-top music-image" src="images/img15.avif" alt="Bandland 2024">
+                            <div class="card-body">
+                                <h5 class="card-title">Bandland 2024</h5>
+                                <p class="card-text text-muted">Nice Grounds, BIEC: Bengaluru</p>
+                                <p class="card-text text-muted">Concerts</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 music-card">
+                        <a href="#">
+                            <img class="card-img-top music-image" src="images/img16.avif"
+                                alt="Lollapalooza India 2025">
+                            <div class="card-body">
+                                <h5 class="card-title">Lollapalooza India 2025</h5>
+                                <p class="card-text text-muted">Mumbai</p>
+                                <p class="card-text text-muted">Concerts</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container py-5">
+            <h2 class="mb-4">Trending Searches Right Now</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3">
+                <div class="col">
+                    <div class="card trending-card">
+                        <div class="card-body">
+                            <h5 class="card-title text-danger">A.R.M</h5>
+                            <p class="card-text text-muted">Movies</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card trending-card">
+                        <div class="card-body">
+                            <h5 class="card-title text-danger">Kishkindha Kaandam</h5>
+                            <p class="card-text text-muted">Movies</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card trending-card">
+                        <div class="card-body">
+                            <h5 class="card-title text-danger">Joker: Folie a Deux</h5>
+                            <p class="card-text text-muted">Movies</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card trending-card">
+                        <div class="card-body">
+                            <h5 class="card-title text-danger">Meiyazhagan</h5>
+                            <p class="card-text text-muted">Movies</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card trending-card">
+                        <div class="card-body">
+                            <h5 class="card-title text-danger">Bougainvillea</h5>
+                            <p class="card-text text-muted">Movies</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card trending-card">
+                        <div class="card-body">
+                            <h5 class="card-title text-danger">Tumbbad</h5>
+                            <p class="card-text text-muted">Movies</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card trending-card">
+                        <div class="card-body">
+                            <h5 class="card-title text-danger">Sunburn Arena Ft.Alan Walker - Kochi</h5>
+                            <p class="card-text text-muted">Events</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card trending-card">
+                        <div class="card-body">
+                            <h5 class="card-title text-danger">Devara - Part 1</h5>
+                            <p class="card-text text-muted">Movies</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card trending-card">
+                        <div class="card-body">
+                            <h5 class="card-title text-danger">Lubber Pandhu</h5>
+                            <p class="card-text text-muted">Movies</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+   <footer class="bg-dark text-white py-5">
+    <div class="container-fluid py-4 bg-dark text-light list-show-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-auto text-center text-md-start mb-3 mb-md-0">
+                    <img src="images/hut.svg" alt="Hut Icon" class="footer-icon mb-2 d-md-block">
+                </div>
+                <div class="col-12 col-md-5 text-center text-md-start mb-3 mb-md-0">
+                    <p class="fw-bold mb-0">List your Show</p>
+                    <p class="mb-0 text-muted small">Got a show, event, activity or a great experience? Partner with us & get
+                        listed on BookMyShow</p>
+                </div>
+                <div class="col-12 col-md-auto ms-md-auto text-center">
+                    <a href="#" class="btn btn-danger btn-contact rounded-pill px-4">Contact Today!</a>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="bg">
-        <div class="main1">
-            <h1>Recommended Movies</h1>
-            <div class="mov">
-                <div class="mov1">
-                    <a href=""><img class="movie" src="images/mov1.avif" alt="mov1" height="520px"></a>
-                    <a href="">
-                        <h4>A.R.M</h1>
-                    </a>
-                    <a href="">
-                        <p>Action/Adventure/Drama/Period</p>
-                    </a>
-                </div>
-                <div class="mov2">
-                    <a href=""><img class="movie" src="images/mov2.avif" alt="mov2" height="520px"></a>
-                    <a href="">
-                        <h4>Kishkindha Kaandam</h1>
-                    </a>
-                    <a href="">
-                        <p>Mystery/Thriller</p>
-                    </a>
-                </div>
-                <div class="mov3">
-                    <a href=""><img class="movie" src="images/mov3.avif" alt="mov3" height="520px"></a>
-                    <a href="">
-                        <h4>Joker: Folie a Deux</h1>
-                    </a>
-                    <a href="">
-                        <p>Drama/Suspense/Thriller</p>
-                    </a>
-                </div>
-                <div class="mov4">
-                    <a href=""><img class="movie" src="images/mov4.avif" alt="mov4" height="520px"></a>
-                    <a href="">
-                        <h4>Kondal</h1>
-                    </a>
-                    <a href="">
-                        <p>Action/Crime/Drama</p>
-                    </a>
-                </div>
-                <div class="mov5">
-                    <a href=""><img class="movie" src="images/mov5.avif" alt="mov5" height="520px"></a>
-                    <a href="">
-                        <h4>Bad Boyz</h1>
-                    </a>
-                    <a href="">
-                        <p>Action/Comedy</p>
-                    </a>
-                </div>
-
+    
+    <div class="container pt-5">
+        <div class="row text-center text-md-start">
+            <div class="col-12 col-md-3 mb-4 mb-md-0">
+                <h6 class="fw-bold text-uppercase mb-3">24/7 CUSTOMER CARE</h6>
+                <ul class="list-unstyled text-muted footer-links">
+                    <li><a href="#" class="text-decoration-none text-muted">Help & Support</a></li>
+                    <li><a href="#" class="text-decoration-none text-muted">Refunds & Cancellations</a></li>
+                    <li><a href="#" class="text-decoration-none text-muted">Contact Us</a></li>
+                </ul>
             </div>
-
-        </div>
-        <div class="main3">
-            <img src="images/img1.avif" alt="img1" width="1680px">
-        </div>
-        <div class="main4">
-            <h1>The Best of Live Events</h1>
-            <img class="hh" src="images/img2.avif" alt="img2">
-            <img class="hh" src="images/img3.avif" alt="img3">
-            <img class="hh" src="images/img4.avif" alt="img4">
-            <img class="hh" src="images/img5.avif" alt="img5">
-            <img class="hh" src="images/img6.avif" alt="img6">
-        </div>
-        <div class="main5">
-            <div class="jjj">
-                <img src="images/premiere.avif" alt="premiere" width="100%">
-                <h3>Premieres</h3>
-                <p>Brand new releases every Friday</p>
+            <div class="col-12 col-md-3 mb-4 mb-md-0">
+                <h6 class="fw-bold text-uppercase mb-3">ABOUT BOOKMYSHOW</h6>
+                <ul class="list-unstyled text-muted footer-links">
+                    <li><a href="#" class="text-decoration-none text-muted">About Us</a></li>
+                    <li><a href="#" class="text-decoration-none text-muted">Press Release</a></li>
+                    <li><a href="#" class="text-decoration-none text-muted">Careers</a></li>
+                    <li><a href="#" class="text-decoration-none text-muted">Blog</a></li>
+                </ul>
             </div>
-            <div class="jj">
-                <div class="prem">
-                    <div class="mov1">
-                        <a href=""><img class="movie" src="images/img7.avif" alt="img7" height="520px"
-                                width="320px"></a>
-                        <a href="">
-                            <h4>Gondola</h1>
-                        </a>
-                        <a href="">
-                            <p>Comedy,Drama,Romantic</p>
-                        </a>
-                    </div>
-                    <div class="mov2">
-                        <a href=""><img class="movie" src="images/img8.avif" alt="img8" height="520px"
-                                width="320px"></a>
-                        <a href="">
-                            <h4>Tuesday</h1>
-                        </a>
-                        <a href="">
-                            <p>Drama,Fantasy</p>
-                        </a>
-                    </div>
-                    <div class="mov3">
-                        <a href=""><img class="movie" src="images/img9.avif" alt="img9" height="520px"
-                                width="320px"></a>
-                        <a href="">
-                            <h4>Trap (2024)</h1>
-                        </a>
-                        <a href="">
-                            <p>Crime,Mystery,Thriller</p>
-                        </a>
-                    </div>
-                    <div class="mov4">
-                        <a href=""><img class="movie" src="images/img10.avif" alt="img10" height="520px"
-                                width="320px"></a>
-                        <a href="">
-                            <h4>Jolly LLB 2</h1>
-                        </a>
-                        <a href="">
-                            <p>Comedy/Drama</p>
-                        </a>
-                    </div>
-                    <div class="mov5">
-                        <a href=""><img class="movie" src="images/img11.avif" alt="img11" height="520px"
-                                width="320px"></a>
-                        <a href="">
-                            <h4>M.S. Dhoni: The Untold Story</h1>
-                        </a>
-                        <a href="">
-                            <p>Biography,Drama</p>
-                        </a>
-                    </div>
-
-                </div>
+            <div class="col-12 col-md-3 mb-4 mb-md-0">
+                <h6 class="fw-bold text-uppercase mb-3">PARTNERS</h6>
+                <ul class="list-unstyled text-muted footer-links">
+                    <li><a href="#" class="text-decoration-none text-muted">Advertise with Us</a></li>
+                    <li><a href="#" class="text-decoration-none text-muted">Sponsors</a></li>
+                    <li><a href="#" class="text-decoration-none text-muted">Affiliates</a></li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-3 mb-4 mb-md-0">
+                <h6 class="fw-bold text-uppercase mb-3">MOBILE APPS</h6>
+                <ul class="list-unstyled text-muted footer-links">
+                    <li><a href="#" class="text-decoration-none text-muted">Download on the App Store</a></li>
+                    <li><a href="#" class="text-decoration-none text-muted">Get it on Google Play</a></li>
+                </ul>
             </div>
         </div>
-        <div class="main6">
-            <h1>Your Music Studio</h1>
-            <div class="mus">
-                <div class="mov1">
-                    <a href=""><img class="movie" src="images/img12.avif" alt="img12" height="520px"></a>
-                    <a href="">
-                        <h4>Shillong Cherry Blossom Festival 2024</h1>
-                    </a>
-                    <a href="">
-                        <p>RBDSA Sports Complex: Shillong concerts</p>
-                    </a>
-                    <a href="">
-                        <p>Concerts</p>
-                    </a>
-                </div>
-                <div class="mov2">
-                    <a href=""><img class="movie" src="images/img13.avif" alt="img13" height="520px"></a>
-                    <a href="">
-                        <h4>BRILLANTE PIANO FESTIVAL - Kochi Chapter</h1>
-                    </a>
-                    <a href="">
-                        <p>JT Performing Arts Centre: Kochi</p>
-                    </a>
-                    <a href="">
-                        <p>Concerts</p>
-                    </a>
-                </div>
-                <div class="mov3">
-                    <a href=""><img class="movie" src="images/img14.avif" alt="img14" height="520px"></a>
-                    <a href="">
-                        <h4>Open Air Kochi</h1>
-                    </a>
-                    <a href="">
-                        <p>Crowne Plaza :Kochi</p>
-                    </a>
-                    <a href="">
-                        <p>Concerts</p>
-                    </a>
-                </div>
-                <div class="mov4">
-                    <a href=""><img class="movie" src="images/img15.avif" alt="img15" height="520px"></a>
-                    <a href="">
-                        <h4>Bandland 2024</h1>
-                    </a>
-                    <a href="">
-                        <p>Nice Grounds, BIEC: Bengaluru</p>
-                    </a>
-                    <a href="">
-                        <p>Concerts</p>
-                    </a>
-                </div>
-                <div class="mov5">
-                    <a href=""><img class="movie" src="images/img16.avif" alt="img16" height="520px"></a>
-                    <a href="">
-                        <h4>Lollapalooza India 2025</h1>
-                    </a>
-                    <a href="">
-                        <p>Mumbai</p>
-                    </a>
-                    <a href="">
-                        <p>Concerts</p>
-                    </a>
-                </div>
-
+        <hr class="my-5 text-muted">
+        
+        <div class="row text-center text-md-start">
+            <div class="col-12 col-md-6 mb-3 mb-md-0">
+                <p class="text-muted small mb-0">© 2025 Bigtree Entertainment Pvt. Ltd. All Rights Reserved.</p>
             </div>
-
-        </div>
-        <div class="main7">
-            <h2>Trending Searches Right Now</h2>
-            <div class="trending ">
-                <div class="rows">
-                    <div class="rows allignment">
-                        <div class="gg">
-                            <h5>A.R.M</h5>
-                            <p>Movies</p>
-                        </div>
-                    </div>
-                    <div class="rows allignment">
-                        <div class="gg">
-                            <h5>Kishkindha Kaandam</h5>
-                            <p>Movies</p>
-                        </div>
-                    </div>
-                    <div class="rows allignment">
-                        <div class="gg">
-                            <h5>Joker:Folie a Deux</h5>
-                            <p>Movies</p>
-                        </div>
-                    </div>
-                    <div class="rows allignment">
-                        <div class="gg">
-                            <h5>Meiyazhagan</h5>
-                            <p>Movies</p>
-                        </div>
-                    </div>
-                    <div class="rows allignment">
-                        <div class="gg">
-                            <h5>Bougainvillea</h5>
-                            <p>Movies</p>
-                        </div>
-                    </div>
-                    <div class="rows allignment">
-                        <div class="gg">
-                            <h5>Tumbbad</h5>
-                            <p>Movies</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="rows">
-                    <div class="rows allignment">
-                        <div class="gg">
-                            <h5>Sunburn Arena Ft.Alan Walker - Kochi</h5>
-                            <p>Events</p>
-                        </div>
-                    </div>
-                    <div class="rows allignment">
-                        <div class="gg">
-                            <h5>Devara - Part 1</h5>
-                            <p>Movies</p>
-                        </div>
-                    </div>
-
-                    <div class="rows allignment">
-                        <div class="gg">
-                            <h5>Lubber Pandhu</h5>
-                            <p>Movies</p>
-                        </div>
-                    </div>
-
-                </div>
+            <div class="col-12 col-md-6 text-center text-md-end social-links">
+                <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
             </div>
         </div>
     </div>
-    <div class="footer">
-        <div class="foot1">
-            <div class="ff1">
-                <img src="images/hut.svg" alt="hut">
-            </div>
-            <div class="ff2">
-               <p><b>List your Show</b> </p>
-            </div>
-            <div class="ff3">
-                <p>Got a show, event, activity or a great experience? Partner with us & get listed on BookMyShow</p>
-            </div>
-            <div class="ff4">
-                
-                    <a href="">Condact Today!</a>
-                
-            </div>
-            
-        </div>
-
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
-
-</body>
-
-</html>
+</footer>
